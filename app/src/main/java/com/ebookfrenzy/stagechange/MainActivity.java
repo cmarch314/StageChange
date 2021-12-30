@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onSaveInstanceState(outState);
         Log.i(TAG,"onSaveInstanceState");
+
+        CharSequence userText = binding.editText.getText();
+        outState.putCharSequence("savedText",userText);
     }
 
 
@@ -78,9 +81,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState){
         super.onRestoreInstanceState(savedInstanceState);
         Log.i(TAG,"onRestoreInstanceState");
+
+        CharSequence userText = savedInstanceState.getCharSequence("savedText");
+        binding.editText.setText(userText);
     }
 
-    
+
 
 
 

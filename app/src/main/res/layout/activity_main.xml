@@ -7,11 +7,12 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editText"
         android:layout_width="237dp"
         android:layout_height="59dp"
         android:ems="10"
         android:inputType="text"
+        android:saveEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
